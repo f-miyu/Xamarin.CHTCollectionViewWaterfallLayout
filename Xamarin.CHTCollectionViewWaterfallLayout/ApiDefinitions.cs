@@ -6,6 +6,18 @@ using UIKit;
 
 namespace Xamarin.CHTCollectionViewWaterfallLayout
 {
+    [Static]
+    partial interface Constants
+    {
+        // extern NSString *const CHTCollectionElementKindSectionHeader;
+        [Field("CHTCollectionElementKindSectionHeader", "__Internal")]
+        NSString CHTCollectionElementKindSectionHeader { get; }
+
+        // extern NSString *const CHTCollectionElementKindSectionFooter;
+        [Field("CHTCollectionElementKindSectionFooter", "__Internal")]
+        NSString CHTCollectionElementKindSectionFooter { get; }
+    }
+
     // @protocol CHTCollectionViewDelegateWaterfallLayout <UICollectionViewDelegate>
     [Protocol, Model]
     interface CHTCollectionViewDelegateWaterfallLayout : IUICollectionViewDelegate

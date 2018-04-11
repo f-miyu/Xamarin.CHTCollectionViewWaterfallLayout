@@ -11,7 +11,7 @@
     <AssemblyName>Xamarin.CHTCollectionViewWaterfallLayout</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <PackageId>Xamarin.CHTCollectionViewWaterfallLayout</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>f-miyu</Authors>
     <Owners>f-miyu</Owners>
     <PackageTags>Xamarin iOS Xamarin.iOS CHTCollectionViewWaterfallLayout</PackageTags>
@@ -51,13 +51,13 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <NativeReference Include="..\libCHTCollectionViewWaterfallLayout.a">
       <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
   <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
