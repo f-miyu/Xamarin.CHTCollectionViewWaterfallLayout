@@ -53,9 +53,7 @@ namespace Xamarin.CHTCollectionViewWaterfallLayout.Sample
 
             _self.Item = item;
 
-            _self.ContentView.LayoutIfNeeded();
-
-            var fittingSize = _self.SystemLayoutSizeFittingSize(size);
+            var fittingSize = _self.ContentView.SystemLayoutSizeFittingSize(size);
 
             widthConstraint.Active = false;
 
