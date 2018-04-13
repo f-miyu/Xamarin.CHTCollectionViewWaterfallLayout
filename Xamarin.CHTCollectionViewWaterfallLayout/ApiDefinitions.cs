@@ -7,15 +7,15 @@ using UIKit;
 namespace Xamarin.CHTCollectionViewWaterfallLayout
 {
     [Static]
-    partial interface Constants
+    partial interface CHTCollectionElementKindSection
     {
         // extern NSString *const CHTCollectionElementKindSectionHeader;
         [Field("CHTCollectionElementKindSectionHeader", "__Internal")]
-        NSString CHTCollectionElementKindSectionHeader { get; }
+        NSString Header { get; }
 
         // extern NSString *const CHTCollectionElementKindSectionFooter;
         [Field("CHTCollectionElementKindSectionFooter", "__Internal")]
-        NSString CHTCollectionElementKindSectionFooter { get; }
+        NSString Footer { get; }
     }
 
     // @protocol CHTCollectionViewDelegateWaterfallLayout <UICollectionViewDelegate>

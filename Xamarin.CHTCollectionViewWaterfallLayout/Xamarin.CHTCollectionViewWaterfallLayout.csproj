@@ -11,7 +11,7 @@
     <AssemblyName>Xamarin.CHTCollectionViewWaterfallLayout</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <PackageId>Xamarin.CHTCollectionViewWaterfallLayout</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>f-miyu</Authors>
     <Owners>f-miyu</Owners>
     <PackageTags>Xamarin iOS Xamarin.iOS CHTCollectionViewWaterfallLayout</PackageTags>

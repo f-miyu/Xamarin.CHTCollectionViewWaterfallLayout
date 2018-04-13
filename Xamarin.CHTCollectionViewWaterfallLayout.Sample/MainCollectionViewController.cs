@@ -18,6 +18,7 @@ namespace Xamarin.CHTCollectionViewWaterfallLayout.Sample
             base.ViewDidLoad();
 
             CollectionView.RegisterNibForCell(MainCollectionViewCell.Nib, MainCollectionViewCell.Key);
+            CollectionView.RegisterNibForSupplementaryView(MainCollectionViewHeader.Nib, CHTCollectionElementKindSection.Header, MainCollectionViewHeader.Key);
 
             if (CollectionView.CollectionViewLayout is CHTCollectionViewWaterfallLayout layout)
             {
@@ -25,6 +26,8 @@ namespace Xamarin.CHTCollectionViewWaterfallLayout.Sample
                 layout.MinimumColumnSpacing = 4;
                 layout.MinimumInteritemSpacing = 4;
                 layout.ItemRenderDirection = CHTCollectionViewWaterfallLayoutItemRenderDirection.ShortestFirst;
+                layout.HeaderHeight = 50;
+                layout.HeaderInset = new UIEdgeInsets(0, 0, 4, 0);
             }
 
             _items = ItemsFactory.Create();
@@ -44,7 +47,12 @@ namespace Xamarin.CHTCollectionViewWaterfallLayout.Sample
             return cell;
         }
 
-        public CGSize GetSizeForItemAtIndexPath(UICollectionView collectionView, UICollectionViewLayout collectionViewLayout, NSIndexPath indexPath)
+		public override UICollectionReusableView GetViewForSupplementaryElement(UICollectionView collectionView, NSString elementKind, NSIndexPath indexPath)
+		{
+            return collectionView.DequeueReusableSupplementaryView(elementKind, MainCollectionViewHeader.Key, indexPath);
+		}
+
+		public CGSize GetSizeForItemAtIndexPath(UICollectionView collectionView, UICollectionViewLayout collectionViewLayout, NSIndexPath indexPath)
         {
             nfloat width = 0;
             if (collectionViewLayout is CHTCollectionViewWaterfallLayout layout)
